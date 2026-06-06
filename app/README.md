@@ -2,15 +2,26 @@
 
 An end-to-end Retrieval-Augmented Generation (RAG) system built from scratch using Haystack, Pinecone, and Sentence Transformers.
 
-Current Stage:
-✅ Document Ingestion Pipeline
+## 📈 Current Progress
+
+- [x] Pinecone Setup
+- [x] Haystack Pipeline Setup
+- [x] PDF Ingestion
+- [x] Chunking
+- [x] Embedding Generation
+- [x] Vector Storage
+- [x] Retrieval Pipeline
+- [x] Semantic Search
+- [x] Gemini Integration
+- [x] End-to-End RAG Pipeline
 
 Upcoming:
-🔄 Retrieval Pipeline
-🔄 Query Processing
-🔄 LLM Integration
-🔄 FastAPI Backend
-🔄 Production Deployment
+
+- [ ] FastAPI API
+- [ ] Chat Interface
+- [ ] Conversation Memory
+- [ ] Evaluation Metrics
+- [ ] Production Deployment
 
 # 🚀 AI RAG Assistant
 
@@ -20,18 +31,40 @@ This project demonstrates a production-style document ingestion pipeline that tr
 
 ---
 
-## 🏗 Architecture
+## 🏗 System Architecture
 
 ```text
-PDF
- ↓
-Document Converter
- ↓
-Document Splitter
- ↓
-Embedding Model
- ↓
+PDF Documents
+       │
+       ▼
+PyPDFToDocument
+       │
+       ▼
+DocumentSplitter
+       │
+       ▼
+SentenceTransformer Embeddings
+       │
+       ▼
 Pinecone Vector Database
+       │
+       ▼
+Question
+       │
+       ▼
+Text Embedding
+       │
+       ▼
+Pinecone Retrieval
+       │
+       ▼
+Relevant Context
+       │
+       ▼
+Gemini 2.5 Flash
+       │
+       ▼
+Generated Answer
 ```
 
 ---
@@ -56,6 +89,7 @@ Pinecone Vector Database
 | Vector Database | Pinecone |
 | Embeddings | Sentence Transformers |
 | PDF Processing | PyPDF |
+| LLM | Gemini 2.5 Flash |
 | Configuration | Python Dotenv |
 
 ---
